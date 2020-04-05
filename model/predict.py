@@ -4,6 +4,8 @@ import pandas as pd
 from util.feature import FeatureEngineering
 from toto_logger.logger import TotoLogger
 
+from totoml.model import ModelPrediction
+
 logger = TotoLogger()
 
 class Predictor: 
