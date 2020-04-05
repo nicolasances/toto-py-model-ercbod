@@ -31,4 +31,4 @@ class Predictor:
 
         logger.compute(context.correlation_id, '[ {ctx} ] - [ PREDICTION ] - Model {model}.v{version} - Predicted category for description [{desc}]: {c}'.format(ctx=context.process, model=model.info['name'], version=model.info['version'], desc=data['description'], c=predicted_category), 'info')
         
-        return {"category": predicted_category}
+        return ModelPrediction(prediction={"category": predicted_category})
